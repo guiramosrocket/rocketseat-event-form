@@ -16,6 +16,9 @@
   --labelColor: #4e4958;
   --spanColor: #c1bccc;
   --betterAcess: #6c6a71;
+  --btnColor: #04d361;
+  --hoverButton: #08e752;
+  --buttonSection: #f0f0f4;
 }
 
 body {
@@ -63,7 +66,7 @@ header {
 form {
   margin-top: 38px;
   background: var(--formBg);
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   min-height: 300px;
   padding: 64px;
   display: flex;
@@ -187,4 +190,32 @@ fieldset legend {
 
 .checkbox-wrapper input:focus + label::before {
   outline: 2px solid var(--black);
+}
+
+footer {
+  background: var(--buttonSection);
+  height: 136px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 64px;
+  margin-bottom: 100px;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid var(--borderBg);
+}
+
+footer .btn {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--white);
+  background: var(--btnColor);
+  border: none;
+  border-radius: 8px;
+  width: 608px;
+  height: 56px;
+}
+
+footer .btn:hover {
+  background: var(--hoverButton);
 }
