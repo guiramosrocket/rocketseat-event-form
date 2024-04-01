@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --bgColor: #e5e5e5;
   --blackBg: #121214;
@@ -8,6 +14,7 @@
   --lineColor: #e6e6f0;
   --labelColor: #4e4958;
   --spanColor: #c1bccc;
+  --betterAcess: #6c6a71;
 }
 
 body {
@@ -41,6 +48,7 @@ header {
   font-weight: 700;
   line-height: 42px;
   color: var(--white);
+  margin-bottom: 24px;
 }
 
 .header-text {
@@ -61,6 +69,12 @@ form {
 
 fieldset {
   border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 fieldset legend {
@@ -84,12 +98,45 @@ fieldset legend {
   font-weight: 400;
   line-height: 24px;
   color: var(--labelColor);
+  margin-bottom: 8px;
 }
 
-.input-wrapper span {
+.input-wrapper label span {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   color: var(--spanColor);
+  margin-left: 12px;
+}
+
+.input-wrapper label span:hover {
+  color: var(--betterAcess);
+}
+
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--betterAcess);
+  border: 1px solid var(--lineColor);
+  border-radius: 8px;
+  width: 608px;
+  height: 56px;
+  padding: 0 24px;
+}
+
+.input-wrapper textarea {
+  padding: 0;
+  height: 168px;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none; /* For Microsoft Edge older versions */
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
 }
